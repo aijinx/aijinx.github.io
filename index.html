@@ -15,10 +15,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script>
-        // window.addEventListener('DOMContentLoaded', (event) => {
-        //     fetchStockPrice();
-        //     JfetchStockPrice();
-        // });
+        window.addEventListener('DOMContentLoaded', (event) => {
+            fetchStockPrice();
+            JfetchStockPrice();
+        });
         async function fetchStockPrice() {
             document.getElementById('stock-price').textContent = "Updating at" + new Date().toLocaleTimeString() + "...";
             const response = await fetch('https://www.google.com/finance/quote/TSLA:NASDAQ');
@@ -46,9 +46,9 @@
             const lastLine = lines[lines.length - 2];
             document.getElementById('Stock').textContent = lastLine;
         }
-        setInterval(fetchStockPrice, 0);
-        setInterval(JfetchStockPrice, 0);
-        setTimeout(parseIndex, 0);
+        // setInterval(fetchStockPrice, 0);
+        // setInterval(JfetchStockPrice, 0);
+        // setTimeout(parseIndex, 0);
     </script>
 </head>
 <body>
